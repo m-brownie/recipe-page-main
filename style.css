@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    line-height: 1.6;
+    background-color: var(--stone-100);
+    color: var(--stone-600);
+}
+
+.recipe-wrapper {
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin: 15rem 45rem 15rem 45rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
+}
+
+.img {
+    height: 35rem;
+    background: url(/assets/images/image-omelette.jpeg) no-repeat center center / cover;
+    border-radius: 1.5rem;
+    padding-top: 4rem;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    color: var(--stone-900);
+    font-weight: 400;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+    color: var(--brown-800);
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--rose-800);
+}
+
+/*p {
+    padding-bottom: 2rem;
+}*/
+
+hr {
+    border-top: 0.5px solid var(--stone-600);
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.preparation-time-wrapper {
+    /*margin-bottom: 3rem;*/
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    background-color: var(--rose-50);
+    border-radius: 1.5rem;
+}
+
+.preparation-time-wrapper ul {
+    padding-left: 3rem;
+}
+
+.preparation-time-wrapper ul li {
+    padding-left: 4rem;
+}
+
+.ingredients-wrapper ul {
+    padding-left: 2rem;
+    line-height: 4rem;
+}
+
+.ingredients-wrapper ul li {
+    padding-left: 2rem;
+}
+
+.instructions-wrapper ol {
+    list-style: none; 
+    counter-reset: num; 
+}
+
+.instructions-wrapper ol li {
+    counter-increment: num;
+}
+
+.instructions-wrapper ol li::before {
+    content: counter(num) ". "; 
+    color: var(--brown-800);
+    font-weight: 400;
+}
